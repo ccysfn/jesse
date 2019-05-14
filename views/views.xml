@@ -8,10 +8,10 @@
       <field name="arch" type="xml">
 	     <form>
 		 <header>
-		 <button name='提交'>
-		 <button name='取消提交'>
-		 <button name='审批通过'>
-		 <button name='审批不通过'>
+		 <button name='提交'/>
+		 <button name='取消提交'/>
+		 <button name='审批通过'/>
+		 <button name='审批不通过'/>
 		    <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
 		 </header> 
         <sheet>
