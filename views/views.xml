@@ -1,0 +1,95 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="soft_list">
+      <field name="name">jyinspur list</field>
+      <field name="model">jyinspur.soft</field>
+      <field name="arch" type="xml">
+	     <form>
+		 <header>
+		 <button name='提交'>
+		 <button name='取消提交'>
+		 <button name='审批通过'>
+		 <button name='审批不通过'>
+		    <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
+		 </header> 
+        <sheet>
+		<group>
+		  <group>
+          <field name="name"/>
+          <field name="ggxh"/>
+          <field name="soft_type"/> 
+          </group>
+          <group>		  
+          <field name="price"/>
+          <field name="jldw"/>  
+          <field name="description"/>
+          <field name="qm"/>
+		  </group>
+		  </group>
+        </sheet>
+		</form>
+      </field>
+    </record>
+    
+	 <record id="product_tree" model="ir.ui.view">
+            <field name="name">product.tree</field>
+            <field name="model">jyinspur.soft</field>
+            <field name="arch" type="xml">
+                <tree string="soft Order">
+				     <field name="name"/>
+          <field name="ggxh"/>
+          <field name="soft_type"/> 
+			<field name="price"/>
+          <field name="jldw"/>  
+          <field name="description"/>
+          <field name="qm"/>
+           <field name="state">		  
+                </tree>
+            </field>
+        </record>
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="soft_action_window">
+      <field name="name">jyinspur window</field>
+      <field name="res_model">jyinspur.soft</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <!-- server action to the one above -->
+    
+    <record model="ir.actions.server" id="soft_action_server">
+      <field name="name">jyinspur server</field>
+      <field name="model_id" ref="model_jyinspur_soft"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": jyinspur.soft,
+        }
+      </field>
+    </record>
+    
+
+    <!-- Top menu item -->
+    
+    <menuitem name="jyinspur" id="jyinspur_menu_root"/>
+    
+    <!-- menu categories -->
+    
+    <menuitem name="Menu 1" id="jyinspur_menu_1" parent="jyinspur_menu_root"/>
+    <menuitem name="Menu 2" id="jyinspur_menu_2" parent="jyinspur_menu_root"/>
+    
+    <!-- actions -->
+    
+    <menuitem name="List" id="jyinspur_menu_1_list" parent="jyinspur_menu_1"
+              action="soft_action_window"/>
+    <menuitem name="Server to list" id="jyinspur" parent="jyinspur_menu_2"
+              action="soft_action_server"/>
+    
+  </data>
+</odoo>
