@@ -28,17 +28,17 @@ class soft(models.Model):
         self.write({'state': 'processing'})
         return {}
 		
-	@api.multi
+    @api.multi
     def cancle_confirm(self):
         self.write({'state': 'draft'})
         return {}
 		
-	@api.multi
+    @api.multi
     def done(self):
         self.write({'state': 'done'})
         return {}	
 		
-	@api.multi
+    @api.multi
     def no_pass(self):
         self.write({'state': 'processing'})
         return {}	
