@@ -8,10 +8,10 @@
       <field name="arch" type="xml">
 	     <form>
 		 <header>
-		 <button name='confirm' string='提交'/>
-		 <button name='cancle_confirm' string='取消提交'/>
-		 <button name='done' string='审批通过'/>
-		 <button name='no_pass' string='审批不通过'/>
+		 <button name='confirm' string='提交' states="draft" type="object"/>
+		 <button name='cancle_confirm' string='取消提交' states="done" type="object"/>
+		 <button name='done' string='审批通过' states="processing" type="object"/>
+		 <button name='no_pass' string='审批不通过' states="processing" type="object"/>
 		    <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
 		 </header> 
         <sheet>

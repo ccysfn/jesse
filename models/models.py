@@ -23,3 +23,24 @@ class soft(models.Model):
     #@api.depends('value')
     #def _value_pc(self):
         #self.value2 = float(self.value) / 100
+    @api.multi
+    def confirm(self):
+        self.write({'state': 'processing'})
+        return {}
+		
+	@api.multi
+    def cancle_confirm(self):
+        self.write({'state': 'draft'})
+        return {}
+		
+	@api.multi
+    def done(self):
+        self.write({'state': 'done'})
+        return {}	
+		
+	@api.multi
+    def no_pass(self):
+        self.write({'state': 'processing'})
+        return {}	
+		
+	
