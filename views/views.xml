@@ -45,7 +45,7 @@
           <field name="jldw"/>  
           <field name="description"/>
           <field name="qm"/>
-           <field name="state">		  
+           <field name="state"/>		  
                 </tree>
             </field>
         </record>
