@@ -42,5 +42,9 @@ class soft(models.Model):
     def no_pass(self):
         self.write({'state': 'processing'})
         return {}	
-		
-	
+
+
+class user(models.Model):
+    _name = 'jyinspur.user'
+    grade = fields.Char('年级')
+
