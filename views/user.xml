@@ -32,7 +32,7 @@
 
     <!-- actions opening views on models -->
     
-    <record model="ir.actions.act_window" id="soft_action_window">
+    <record model="ir.actions.act_window" id="user_action_window">
       <field name="name">jyinspur user</field>
       <field name="res_model">jyinspur.user</field>
       <field name="view_mode">tree,form</field>
@@ -50,7 +50,7 @@
     <!-- actions -->
     
     <menuitem name="user" id="jyinspur_menu_1_user" parent="jyinspur_menu_root"
-              action="soft_action_window"/>
+              action="user_action_window"/>
 
   </data>
 </odoo>
