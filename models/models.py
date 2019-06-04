@@ -54,7 +54,7 @@ class base(models.Model):
     dict = fields.Char('字典')
 
 class course(models.Model):
-    _name = 'jyinspur.course'
+
     _inherit = {product.product}
     c_name = fields.Char('课程名称')
 
