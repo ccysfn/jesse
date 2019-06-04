@@ -10,10 +10,7 @@
     
 
     
-    <menuitem name="config" id="jyinspur_menu_config" parent="jyinspur_menu_root"/>
-    <!-- actions -->
-    
-     <menuitem name="base" id="jyinspur_menu_base" parent="jyinspur_menu_config"/>
+
     
   </data>
 </odoo>

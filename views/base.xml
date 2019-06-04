@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="user_list">
+      <field name="name">jyinspur base</field>
+      <field name="model">jyinspur.base</field>
+      <field name="arch" type="xml">
+	     <form>
+
+        <sheet>
+		<group>
+	  
+          <field name="dice"/>
+
+		  </group>
+        </sheet>
+		</form>
+      </field>
+    </record>
+    
+	 <record id="product_tree" model="ir.ui.view">
+            <field name="name">jyinspur.user</field>
+            <field name="model">jyinspur.base</field>
+            <field name="arch" type="xml">
+                <tree string="base Order">
+				     <field name="dict"/>
+
+                </tree>
+            </field>
+        </record>
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="base_action_window">
+      <field name="name">jyinspur user</field>
+      <field name="res_model">jyinspur.base</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <!-- server action to the one above -->
+    
+
+
+    <!-- Top menu item -->
+    
+    <menuitem name="config" id="jyinspur_menu_config" parent="jyinspur_menu_root"/>
+    <!-- actions -->
+    
+     <menuitem name="base" action="base_action_window" id="jyinspur_menu_base" parent="jyinspur_menu_config"/>
+    
+    <!-- actions -->
+    
+
+  </data>
+</odoo>

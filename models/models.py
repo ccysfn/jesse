@@ -48,3 +48,8 @@ class user(models.Model):
     _name = 'jyinspur.user'
     grade = fields.Char('年级')
 
+
+class base(models.Model):
+    _name = 'jyinspur.base'
+    dict = fields.Char('字典')
+
