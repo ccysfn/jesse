@@ -46,12 +46,15 @@ class soft(models.Model):
 
 class user(models.Model):
     _name = 'jyinspur.user'
-    _inherits = {'res.partner': 'partner_id'}
-    name = fields.Char(related='partner_id.name',string='昵称', inherited=True)
     grade = fields.Char('年级')
 
 
 class base(models.Model):
     _name = 'jyinspur.base'
     dict = fields.Char('字典')
+
+class course(models.Model):
+    _name = 'jyinspur.course'
+    _inherit = {product.product}
+    c_name = fields.Char('课程名称')
 

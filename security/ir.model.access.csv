@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_jyinspur_soft,jyinspur.soft,jesse.model_jyinspur_soft,,1,1,1,1
 access_jyinspur_user,jyinspur.user,jesse.model_jyinspur_user,,1,1,1,1
 access_jyinspur_base,jyinspur.base,jesse.model_jyinspur_base,,1,1,1,1
+access_jyinspur_course,jyinspur.course,jesse.model_jyinspur_course,,1,1,1,1

@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="course_list">
+      <field name="name">jyinspur course</field>
+      <field name="model">jyinspur.course</field>
+      <field name="arch" type="xml">
+	     <form>
+
+        <sheet>
+		<group>
+	  
+          <field name="c_name"/>
+
+		  </group>
+        </sheet>
+		</form>
+      </field>
+    </record>
+    
+	 <record id="product_tree" model="ir.ui.view">
+            <field name="name">jyinspur.course</field>
+            <field name="model">jyinspur.course</field>
+            <field name="arch" type="xml">
+                <tree string="course Order">
+				     <field name="c_name"/>
+
+                </tree>
+            </field>
+        </record>
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="course_action_window">
+      <field name="name">jyinspur course</field>
+      <field name="res_model">jyinspur.course</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <!-- server action to the one above -->
+    
+
+
+    <!-- Top menu item -->
+    
+
+    
+    <!-- actions -->
+    
+    <menuitem name="course" id="jyinspur_menu_1_course" parent="jyinspur_menu_config"
+              action="course_action_window"/>
+
+  </data>
+</odoo>
