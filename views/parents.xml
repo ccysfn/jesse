@@ -10,7 +10,7 @@
     
 
     
-    
+    <menuitem name="config" id="jyinspur_menu_config" parent="jyinspur_menu_root"/>
     <!-- actions -->
     
 

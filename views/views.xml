@@ -53,7 +53,7 @@
     <!-- actions opening views on models -->
     
     <record model="ir.actions.act_window" id="soft_action_window">
-      <field name="name">jyinspur window</field>
+      <field name="name">jyinspur soft</field>
       <field name="res_model">jyinspur.soft</field>
       <field name="view_mode">tree,form</field>
     </record>
