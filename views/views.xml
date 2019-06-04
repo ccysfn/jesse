@@ -61,35 +61,19 @@
 
     <!-- server action to the one above -->
     
-    <record model="ir.actions.server" id="soft_action_server">
-      <field name="name">jyinspur server</field>
-      <field name="model_id" ref="model_jyinspur_soft"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": jyinspur.soft,
-        }
-      </field>
-    </record>
+
     
 
     <!-- Top menu item -->
-    
-    <menuitem name="jyinspur" id="jyinspur_menu_root"/>
-    
+
     <!-- menu categories -->
     
-    <menuitem name="Menu 1" id="jyinspur_menu_1" parent="jyinspur_menu_root"/>
-    <menuitem name="Menu 2" id="jyinspur_menu_2" parent="jyinspur_menu_root"/>
-    
+
     <!-- actions -->
     
-    <menuitem name="List" id="jyinspur_menu_1_list" parent="jyinspur_menu_1"
+    <menuitem name="soft" id="jyinspur_menu_1_soft" parent="jyinspur_menu_1"
               action="soft_action_window"/>
-    <menuitem name="Server to list" id="jyinspur" parent="jyinspur_menu_2"
-              action="soft_action_server"/>
+ 
     
   </data>
 </odoo>
