@@ -49,7 +49,7 @@
     
     <!-- actions -->
     
-    <menuitem name="user" id="jyinspur_menu_1_user" parent="jyinspur_menu_1"
+    <menuitem name="user" id="jyinspur_menu_1_user" parent="jyinspur_menu_root"
               action="soft_action_window"/>
 
   </data>

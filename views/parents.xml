@@ -8,8 +8,7 @@
     
     <!-- menu categories -->
     
-    <menuitem name="基础设置" id="jyinspur_menu_1" parent="jyinspur_menu_root" sequence="999"/>
-    <menuitem name="其他" id="jyinspur_menu_2" parent="jyinspur_menu_root" sequence="10"/>
+
     
     
     <!-- actions -->
