@@ -20,7 +20,7 @@
     </record>
     
 	 <record id="product_tree" model="ir.ui.view">
-            <field name="name">product.user</field>
+            <field name="name">jyinspur.user</field>
             <field name="model">jyinspur.user</field>
             <field name="arch" type="xml">
                 <tree string="user Order">
@@ -33,7 +33,7 @@
     <!-- actions opening views on models -->
     
     <record model="ir.actions.act_window" id="soft_action_window">
-      <field name="name">jyinspur window</field>
+      <field name="name">jyinspur user</field>
       <field name="res_model">jyinspur.user</field>
       <field name="view_mode">tree,form</field>
     </record>
