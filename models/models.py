@@ -46,6 +46,8 @@ class soft(models.Model):
 
 class user(models.Model):
     _name = 'jyinspur.user'
+    _inherits = {'res.partner': 'partner_id'}
+    name = fields.Char(related='partner_id.name',string='昵称', inherited=True)
     grade = fields.Char('年级')
 
 
