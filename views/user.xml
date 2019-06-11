@@ -12,7 +12,7 @@
 		<group>
 	  
           <field name="grade"/>
-<field name="name"/>
+
 		  </group>
         </sheet>
 		</form>
@@ -25,7 +25,6 @@
             <field name="arch" type="xml">
                 <tree string="user Order">
 				     <field name="grade"/>
-<field name="name"/>
                 </tree>
             </field>
         </record>
