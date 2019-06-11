@@ -15,7 +15,7 @@ class soft(models.Model):
     qm = fields.Char(string='全名',compute='qm_compute')  #compute为调用函数名
     state = fields.Selection([('draft','未提交'),('processing','已提交'),('done','已审批')],readonly=True,string='审批状态',default='draft')
 
-
+    @api.one
     @api.depends('name','ggxh')  #填入需要的参数
     def qm_compute(self):
         self.qm = str(self.name) + '-' + str(self.ggxh)  #需要加上str()函数不然提示数据类型错误
