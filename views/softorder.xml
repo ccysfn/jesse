@@ -12,8 +12,8 @@
 		 <button name='cancle_confirm' string='取消提交' states="done" type="object"/>
 		 <button name='done' string='审批通过' states="processing" type="object"/>
 		 <button name='no_pass' string='审批不通过' states="processing" type="object"/>
-         <button name='to_order' string='生成订单' states="to_order" type="object"/>
-         <button name='stock_out' string='出库' states="stock_out" type="object"/>
+         <button name='to_order' string='生成订单' states="done" type="object"/>
+         <button name='stock_out' string='出库' states="to_order" type="object"/>
 		 <field name="state" widget="statusbar" statusbar_visible="draft,processing,done,to_order,stock_out" readonly="1"/>
 		 </header> 
         <sheet>
