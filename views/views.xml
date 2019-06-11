@@ -2,7 +2,7 @@
   <data>
     <!-- explicit list view definition -->
     
-    <record model="ir.ui.view" id="soft_list">
+    <record model="ir.ui.view" id="soft_form">
       <field name="name">jyinspur list</field>
       <field name="model">jyinspur.soft</field>
       <field name="arch" type="xml">
@@ -33,8 +33,8 @@
       </field>
     </record>
     
-	 <record id="product_tree" model="ir.ui.view">
-            <field name="name">product.tree</field>
+	 <record id="soft_tree" model="ir.ui.view">
+            <field name="name">soft.tree</field>
             <field name="model">jyinspur.soft</field>
             <field name="type">tree</field>
             <field name="arch" type="xml">
