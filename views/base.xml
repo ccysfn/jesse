@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
     
     <record model="ir.ui.view" id="base_form">
-      <field name="name">jyinspur base</field>
+      <field name="name">基础资料</field>
       <field name="model">jyinspur.base</field>
       <field name="arch" type="xml">
 	     <form>
@@ -20,7 +20,7 @@
     </record>
     
 	 <record id="base_tree" model="ir.ui.view">
-            <field name="name">jyinspur.base</field>
+            <field name="name">基础资料</field>
             <field name="model">jyinspur.base</field>
             <field name="arch" type="xml">
                 <tree string="base Order">
@@ -33,7 +33,7 @@
     <!-- actions opening views on models -->
     
     <record model="ir.actions.act_window" id="base_action_window">
-      <field name="name">jyinspur base</field>
+      <field name="name">基础资料</field>
       <field name="res_model">jyinspur.base</field>
       <field name="view_mode">tree,form</field>
 
@@ -46,10 +46,10 @@
 
     <!-- Top menu item -->
     
-    <menuitem name="config" id="jyinspur_menu_config" parent="jyinspur_menu_root"/>
+    <menuitem name="配置" id="jyinspur_menu_config" parent="jyinspur_menu_root"/>
     <!-- actions -->
     
-     <menuitem name="base" action="base_action_window" id="jyinspur_menu_base" parent="jyinspur_menu_config"/>
+     <menuitem name="基础资料" action="base_action_window" id="jyinspur_menu_base" parent="jyinspur_menu_config"/>
     
     <!-- actions -->
     
