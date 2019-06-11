@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
     
     <record model="ir.ui.view" id="softorder_form">
-      <field name="name">jyinspur.softorder</field>
+      <field name="name">软件订单</field>
       <field name="model">jyinspur.softorder</field>
       <field name="arch" type="xml">
 	     <form>
@@ -31,7 +31,7 @@
     </record>
     
 	 <record id="softorder_tree" model="ir.ui.view">
-            <field name="name">jyinspur.softorder</field>
+            <field name="name">软件订单</field>
             <field name="model">jyinspur.softorder</field>
             <field name="type">tree</field>
             <field name="arch" type="xml">
@@ -50,7 +50,7 @@
     <!-- actions opening views on models -->
     
     <record model="ir.actions.act_window" id="softorder_action_window">
-      <field name="name">jyinspur.softorder</field>
+      <field name="name">软件订单</field>
       <field name="res_model">jyinspur.softorder</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -68,7 +68,7 @@
 
     <!-- actions -->
     
-    <menuitem name="softorder" id="jyinspur_menu_1_softorder" parent="jyinspur_menu_root"
+    <menuitem name="软件订单" id="jyinspur_menu_1_softorder" parent="jyinspur_menu_root"
               action="softorder_action_window"/>
  
     

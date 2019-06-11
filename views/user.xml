@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
     
     <record model="ir.ui.view" id="user_list">
-      <field name="name">jyinspur user</field>
+      <field name="name">年级</field>
       <field name="model">jyinspur.user</field>
       <field name="arch" type="xml">
 	     <form>
@@ -20,7 +20,7 @@
     </record>
     
 	 <record id="product_tree" model="ir.ui.view">
-            <field name="name">jyinspur.user</field>
+            <field name="name">年级</field>
             <field name="model">jyinspur.user</field>
             <field name="arch" type="xml">
                 <tree string="user Order">
@@ -32,7 +32,7 @@
     <!-- actions opening views on models -->
     
     <record model="ir.actions.act_window" id="user_action_window">
-      <field name="name">jyinspur user</field>
+      <field name="name">年级</field>
       <field name="res_model">jyinspur.user</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -48,7 +48,7 @@
     
     <!-- actions -->
     
-    <menuitem name="user" id="jyinspur_menu_1_user" parent="jyinspur_menu_root"
+    <menuitem name="年级" id="jyinspur_menu_1_user" parent="jyinspur_menu_root"
               action="user_action_window"/>
 
   </data>

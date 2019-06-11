@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
     
     <record model="ir.ui.view" id="soft_form">
-      <field name="name">jyinspur list</field>
+      <field name="name">软件产品</field>
       <field name="model">jyinspur.soft</field>
       <field name="arch" type="xml">
 	     <form>
@@ -34,7 +34,7 @@
     </record>
     
 	 <record id="soft_tree" model="ir.ui.view">
-            <field name="name">soft.tree</field>
+            <field name="name">软件列表</field>
             <field name="model">jyinspur.soft</field>
             <field name="type">tree</field>
             <field name="arch" type="xml">
@@ -54,7 +54,7 @@
     <!-- actions opening views on models -->
     
     <record model="ir.actions.act_window" id="soft_action_window">
-      <field name="name">jyinspur soft</field>
+      <field name="name">软件产品</field>
       <field name="res_model">jyinspur.soft</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -72,7 +72,7 @@
 
     <!-- actions -->
     
-    <menuitem name="soft" id="jyinspur_menu_1_soft" parent="jyinspur_menu_root"
+    <menuitem name="软件产品" id="jyinspur_menu_1_soft" parent="jyinspur_menu_root"
               action="soft_action_window"/>
  
     
