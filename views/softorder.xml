@@ -18,7 +18,7 @@
 		
 		  <group>
           <field name="user"/>
-          <field name="soft"/>
+          <field name="soft" domain="[('state','=','done')]"/>
           <field name="quantity"/>
           <field name="price"/>
           <field name="sum"/>
