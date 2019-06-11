@@ -36,16 +36,17 @@
 	 <record id="product_tree" model="ir.ui.view">
             <field name="name">product.tree</field>
             <field name="model">jyinspur.soft</field>
+            <field name="type">tree</field>
             <field name="arch" type="xml">
                 <tree string="soft Order">
-				     <field name="name"/>
-          <field name="ggxh"/>
-          <field name="soft_type"/> 
-			<field name="price"/>
-          <field name="jldw"/>  
-          <field name="description"/>
-          <field name="qm"/>
-           <field name="state"/>		  
+                 <field name="name"/>
+                 <field name="ggxh"/>
+                 <field name="soft_type"/> 
+                 <field name="price"/>
+                 <field name="jldw"/>  
+                 <field name="description"/>
+                 <field name="qm"/>
+                 <field name="state"/>
                 </tree>
             </field>
         </record>
