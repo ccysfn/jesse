@@ -4,7 +4,7 @@
 
     <!-- Top menu item -->
     
-    <menuitem name="jyinspur" id="jyinspur_menu_root" parent=""/>
+    <menuitem name="江阴浪潮软件" id="jyinspur_menu_root" parent=""/>
     
     <!-- menu categories -->
     
