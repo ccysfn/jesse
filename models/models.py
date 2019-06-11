@@ -59,14 +59,19 @@ class softorders(models.Model):
     quantity=fields.Integer('数量')
     user = fields.Many2one('res.partner',string='用户')
     state = fields.Selection([('draft','未提交'),('processing','已提交'),('done','已审批')],readonly=True,string='审批状态',default='draft')
-    price = fields.Float('单价')
+    price = fields.Float('单价',compute='_get_price')
     sum = fields.Float('总价',default=0, compute='_compute_pay_total', store=True,readonly=True)
     
     @api.one
     @api.depends('price', 'quantity')
     def _compute_pay_total(self):
         self.sum = self.price*self.quantity
-
+    
+    @api.one
+    @api.depends('soft')
+    def _get_price(self):
+        self.price = self.soft.price
+    
     @api.multi
     def confirm(self):
         self.write({'state': 'processing'})
