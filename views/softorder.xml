@@ -18,8 +18,10 @@
 		
 		  <group>
           <field name="user"/>
-          <field name="quantity"/>
           <field name="soft"/>
+          <field name="quantity"/>
+          <field name="price"/>
+          <field name="sum"/>
           </group>
 
 		 
@@ -35,9 +37,12 @@
             <field name="arch" type="xml">
                 <tree string="soft Order">
                <field name="user"/>
-             <field name="quantity"/>
              <field name="soft"/>
+             <field name="price"/>
+             <field name="quantity"/>
+             <field name="sum"/>
              <field name="state"/> 
+             
                 </tree>
             </field>
         </record>
