@@ -59,15 +59,18 @@ class softorders(models.Model):
     soft = fields.Many2one('jyinspur.soft',string='软件产品')
     quantity=fields.Integer('数量')
     user = fields.Many2one('res.partner',string='用户')
-    state = fields.Selection([('draft','未提交'),('processing','已提交'),('done','已审批')],readonly=True,string='审批状态',default='draft')
+    state = fields.Selection([('draft','未提交'),('processing','已提交'),('done','已审批'),('to_order','生成订单'),('stock_out','出库')],readonly=True,string='单据状态',default='draft')
     price = fields.Float('单价',compute='_get_price')
     sum = fields.Float('总价',default=0, compute='_compute_pay_total', store=True,readonly=True)
     
+    
+    #自动计算总金额
     @api.one
     @api.depends('price', 'quantity')
     def _compute_pay_total(self):
         self.sum = self.price*self.quantity
     
+    #自动获取软件价格
     @api.one
     @api.depends('soft')
     def _get_price(self):
