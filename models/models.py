@@ -96,6 +96,15 @@ class softorders(models.Model):
     def no_pass(self):
         self.write({'state': 'processing'})
         return {}
-
+        
+    @api.multi
+    def to_order(self):
+        self.write({'state': 'to_order'})
+        return {}
+        
+    @api.multi
+    def stock_out(self):
+        self.write({'state': 'stock_out'})
+        return {}
 
 
