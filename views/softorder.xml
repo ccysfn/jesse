@@ -20,7 +20,6 @@
           <field name="user"/>
           <field name="quantity"/>
           <field name="soft"/>
-          <field name="state"/> 
           </group>
 
 		 
