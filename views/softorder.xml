@@ -1,0 +1,72 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="softorder_form">
+      <field name="name">jyinspur.softorder</field>
+      <field name="model">jyinspur.softorder</field>
+      <field name="arch" type="xml">
+	     <form>
+		 <header>
+		 <button name='confirm' string='提交' states="draft" type="object"/>
+		 <button name='cancle_confirm' string='取消提交' states="done" type="object"/>
+		 <button name='done' string='审批通过' states="processing" type="object"/>
+		 <button name='no_pass' string='审批不通过' states="processing" type="object"/>
+		 <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
+		 </header> 
+        <sheet>
+		
+		  <group>
+          <field name="user"/>
+          <field name="quantity"/>
+          <field name="soft"/>
+          <field name="state"/> 
+          </group>
+
+		 
+        </sheet>
+		</form>
+      </field>
+    </record>
+    
+	 <record id="softorder_tree" model="ir.ui.view">
+            <field name="name">jyinspur.softorder</field>
+            <field name="model">jyinspur.softorder</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="soft Order">
+               <field name="user"/>
+             <field name="quantity"/>
+             <field name="soft"/>
+             <field name="state"/> 
+                </tree>
+            </field>
+        </record>
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="softorder_action_window">
+      <field name="name">jyinspur.softorder</field>
+      <field name="res_model">jyinspur.softorder</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <!-- server action to the one above -->
+    
+
+    
+
+    <!-- Top menu item -->
+
+    <!-- menu categories -->
+    
+
+    <!-- actions -->
+    
+    <menuitem name="soft" id="jyinspur_menu_1_soft" parent="jyinspur_menu_root"
+              action="softorder_action_window"/>
+ 
+    
+  </data>
+</odoo>

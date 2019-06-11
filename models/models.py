@@ -14,8 +14,8 @@ class soft(models.Model):
     jldw = fields.Many2one('uom.uom',string='单位')
     qm = fields.Char(string='全名',compute='qm_compute')  #compute为调用函数名
     state = fields.Selection([('draft','未提交'),('processing','已提交'),('done','已审批')],readonly=True,string='审批状态',default='draft')
-    
-    
+
+
     @api.depends('name','ggxh')  #填入需要的参数
     def qm_compute(self):
         self.qm = str(self.name) + '-' + str(self.ggxh)  #需要加上str()函数不然提示数据类型错误
@@ -27,21 +27,21 @@ class soft(models.Model):
     def confirm(self):
         self.write({'state': 'processing'})
         return {}
-		
+
     @api.multi
     def cancle_confirm(self):
         self.write({'state': 'draft'})
         return {}
-		
+
     @api.multi
     def done(self):
         self.write({'state': 'done'})
-        return {}	
-		
+        return {}
+
     @api.multi
     def no_pass(self):
         self.write({'state': 'processing'})
-        return {}	
+        return {}
 
 
 class user(models.Model):
@@ -52,6 +52,33 @@ class user(models.Model):
 class base(models.Model):
     _name = 'jyinspur.base'
     dict = fields.Char('字典')
+
+class softorders(models.Model):
+    _name = 'jyinspur.softorder'
+    soft = fields.Many2one('jyinspur.soft',string='软件产品')
+    quantity=fields.Integer('数量')
+    user = fields.Many2one('res.partner',string='用户')
+    state = fields.Selection([('draft','未提交'),('processing','已提交'),('done','已审批')],readonly=True,string='审批状态',default='draft')
+    
+    @api.multi
+    def confirm(self):
+        self.write({'state': 'processing'})
+        return {}
+
+    @api.multi
+    def cancle_confirm(self):
+        self.write({'state': 'draft'})
+        return {}
+
+    @api.multi
+    def done(self):
+        self.write({'state': 'done'})
+        return {}
+
+    @api.multi
+    def no_pass(self):
+        self.write({'state': 'processing'})
+        return {}
 
 
 
