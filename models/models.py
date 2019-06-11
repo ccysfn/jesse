@@ -53,9 +53,10 @@ class base(models.Model):
     _name = 'jyinspur.base'
     dict = fields.Char('字典')
 
+#软件订单
 class softorders(models.Model):
     _name = 'jyinspur.softorder'
-    soft = fields.Many2one('jyinspur.soft',string='软件产品')
+    soft = fields.Many2one('jyinspur.soft',string='软件产品',domain="[('soft.state'),'=','done']")
     quantity=fields.Integer('数量')
     user = fields.Many2one('res.partner',string='用户')
     state = fields.Selection([('draft','未提交'),('processing','已提交'),('done','已审批')],readonly=True,string='审批状态',default='draft')
@@ -71,6 +72,7 @@ class softorders(models.Model):
     @api.depends('soft')
     def _get_price(self):
         self.price = self.soft.price
+    
     
     @api.multi
     def confirm(self):
