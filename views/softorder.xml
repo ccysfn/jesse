@@ -64,7 +64,7 @@
 
     <!-- actions -->
     
-    <menuitem name="soft" id="jyinspur_menu_1_soft" parent="jyinspur_menu_root"
+    <menuitem name="softorder" id="jyinspur_menu_1_softorder" parent="jyinspur_menu_root"
               action="softorder_action_window"/>
  
     
