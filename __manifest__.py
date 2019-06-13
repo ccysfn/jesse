@@ -26,7 +26,7 @@
         'security/ir.model.access.csv',
         'views/parents.xml',
         'views/views.xml',
-       # 'views/templates.xml',
+        'views/templates.xml',
         'views/base.xml',
         #'views/course.xml',
         'views/softorder.xml',
