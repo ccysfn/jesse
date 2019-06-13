@@ -8,7 +8,8 @@ class Jyinspur(http.Controller):
         #return http.request.render('jyinspur.index',{
         #    'soft':['odoo','python','bootstarp']
         #})
-        return "hello"
+        #return "hello"
+        return http.request.env['jyinspur.soft'].search([])
 
     @http.route('/jyinspur/jyinspur/objects/', auth='public')
     def list(self, **kw):
