@@ -4,7 +4,9 @@ from odoo import http
 class Jyinspur(http.Controller):
     @http.route('/jyinspur/soft/', auth='public')
     def index(self, **kw):
-        return http.request.render('soft.index','soft.name'
+        return http.request.render('academy.index', {
+            'teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
+        }
         )
 
     @http.route('/jyinspur/jyinspur/objects/', auth='public')
