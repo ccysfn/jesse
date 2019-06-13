@@ -4,10 +4,10 @@ from odoo import http
 class Jyinspur(http.Controller):
     @http.route('/jyinspur/soft/', auth='public')
     def index(self, **kw):
-        return http.request.render('soft.index', {
-            'teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
-        }
-        )
+        Soft=http.request.env['jyinspur.soft']
+        return http.request.render('soft.index',{
+            'soft':Soft.search([])
+        })
 
     @http.route('/jyinspur/jyinspur/objects/', auth='public')
     def list(self, **kw):

@@ -21,8 +21,8 @@
         
          <template id="index">
             <title>jyinspur_soft</title>
-            <t t-foreach="teachers" t-as="teacher">
-              <p><t t-esc="teacher"/></p>
+            <t t-foreach="soft" t-as="soft">
+              <p><t t-esc="soft.name"/><t t-esc="soft.ggxh"/></p>
             </t>
         </template>
     </data>
