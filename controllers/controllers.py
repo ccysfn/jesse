@@ -2,7 +2,7 @@
 from odoo import http
 
 class Jyinspur(http.Controller):
-    @http.route('/jyinspur/jyinspur/', auth='public')
+    @http.route('/jyinspur/soft/', auth='public')
     def index(self, **kw):
         return "Hello, world"
 
