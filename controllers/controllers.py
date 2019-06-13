@@ -5,10 +5,10 @@ class Jyinspur(http.Controller):
     @http.route('/jyinspur/soft/', auth='public')
     def index(self, **kw):
         #Softs = http.request.env['jyinspur.soft']
-        #return http.request.render('jyinspur.index',{
-         #   'soft':Softs.search([])
-        #})
-        return "hello"
+        return http.request.render('jyinspur.index',{
+            'soft':['odoo','python','bootstarp']
+        })
+        #return "hello"
 
     @http.route('/jyinspur/jyinspur/objects/', auth='public')
     def list(self, **kw):
