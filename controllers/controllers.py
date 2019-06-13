@@ -5,7 +5,7 @@ class Jyinspur(http.Controller):
     @http.route('/jyinspur/soft/', auth='public')
     def index(self, **kw):
         Softs=http.request.env['jyinspur.soft']
-        return http.request.render('soft.index',{
+        return http.request.render('jyinspur.index',{
             'soft':Softs.search([])
         })
 
