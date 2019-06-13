@@ -4,9 +4,9 @@ from odoo import http
 class Jyinspur(http.Controller):
     @http.route('/jyinspur/soft/', auth='public')
     def index(self, **kw):
-        Soft=http.request.env['jyinspur.soft']
+        Softs=http.request.env['jyinspur.soft']
         return http.request.render('soft.index',{
-            'soft':Soft.search([])
+            'soft':Softs.search([])
         })
 
     @http.route('/jyinspur/jyinspur/objects/', auth='public')
